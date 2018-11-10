@@ -111,14 +111,26 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FoodPantryStockItemID">
-          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="1" />
           <End Role="FoodPantryStock" Type="Self.FoodPantryStock" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Orders">
+            <Principal Role="Items">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="FoodPantryStock">
               <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_itemstypeid">
+          <End Role="ItemTypes" Type="Self.ItemTypes" Multiplicity="0..1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="TypeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -210,8 +222,12 @@
             <End Role="FoodPantryStock" EntitySet="FoodPantryStock" />
           </AssociationSet>
           <AssociationSet Name="FK_FoodPantryStockItemID" Association="Self.FK_FoodPantryStockItemID">
-            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Items" EntitySet="Items" />
             <End Role="FoodPantryStock" EntitySet="FoodPantryStock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_itemstypeid" Association="Self.FK_itemstypeid">
+            <End Role="ItemTypes" EntitySet="ItemTypes" />
+            <End Role="Items" EntitySet="Items" />
           </AssociationSet>
           <AssociationSet Name="FK_OrderItemsItemID" Association="Self.FK_OrderItemsItemID">
             <End Role="Items" EntitySet="Items" />
@@ -285,6 +301,14 @@
             <End Role="Order" EntitySet="Orders" />
             <End Role="OrderItem" EntitySet="OrderItems" />
           </AssociationSet>
+          <AssociationSet Name="FK_FoodPantryStockItemID1" Association="HackathonModel.FK_FoodPantryStockItemID1">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="FoodPantryStock" EntitySet="FoodPantryStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_itemstypeid" Association="HackathonModel.FK_itemstypeid">
+            <End Role="ItemType" EntitySet="ItemTypes" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Family">
           <Key>
@@ -328,6 +352,7 @@
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="FoodPantry" Relationship="HackathonModel.FK_FoodPantryStockFoodPantryID" FromRole="FoodPantryStock" ToRole="FoodPantry" />
           <NavigationProperty Name="Order" Relationship="HackathonModel.FK_FoodPantryStockItemID" FromRole="FoodPantryStock" ToRole="Order" />
+          <NavigationProperty Name="Item" Relationship="HackathonModel.FK_FoodPantryStockItemID1" FromRole="FoodPantryStock" ToRole="Item" />
         </EntityType>
         <EntityType Name="Item">
           <Key>
@@ -340,6 +365,8 @@
           <NavigationProperty Name="OrderItems" Relationship="HackathonModel.FK_OrderItemsItemID" FromRole="Item" ToRole="OrderItem" />
           <NavigationProperty Name="RequestedItems" Relationship="HackathonModel.FK_RequestItemsItemID" FromRole="Item" ToRole="RequestedItem" />
           <Property Name="PointValue" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="FoodPantryStocks" Relationship="HackathonModel.FK_FoodPantryStockItemID1" FromRole="Item" ToRole="FoodPantryStock" />
+          <NavigationProperty Name="ItemType" Relationship="HackathonModel.FK_itemstypeid" FromRole="Item" ToRole="ItemType" />
         </EntityType>
         <EntityType Name="ItemType">
           <Key>
@@ -348,6 +375,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Type" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Items" Relationship="HackathonModel.FK_itemstypeid" FromRole="ItemType" ToRole="Item" />
         </EntityType>
         <EntityType Name="OrderItem">
           <Key>
@@ -488,6 +516,30 @@
             </Principal>
             <Dependent Role="OrderItem">
               <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FoodPantryStockItemID1">
+          <End Type="HackathonModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="HackathonModel.FoodPantryStock" Role="FoodPantryStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FoodPantryStock">
+              <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_itemstypeid">
+          <End Type="HackathonModel.ItemType" Role="ItemType" Multiplicity="0..1" />
+          <End Type="HackathonModel.Item" Role="Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ItemType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="TypeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

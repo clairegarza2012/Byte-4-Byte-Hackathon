@@ -14,8 +14,17 @@ namespace byte4bite_hackathon.Database
     
     public partial class ItemType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ItemType()
+        {
+            this.Items = new HashSet<Item>();
+        }
+    
         public int ID { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

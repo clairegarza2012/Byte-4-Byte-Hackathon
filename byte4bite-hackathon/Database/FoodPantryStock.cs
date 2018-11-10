@@ -21,5 +21,6 @@ namespace byte4bite_hackathon.Database
     
         public virtual FoodPantry FoodPantry { get; set; }
         public virtual Order Order { get; set; }
+        public virtual Item Item { get; set; }
     }
 }

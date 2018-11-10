@@ -1,4 +1,5 @@
-﻿using System;
+﻿using byte4bite_hackathon.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,11 +15,22 @@ namespace byte4bite_hackathon.Controllers
             return View();
         }
 
-        public ActionResult GetFamilies()
+        public JsonResult GetFamilies()
         {
-            //get families
-            var families = new List<string>();
-            return Json(families);
+            using (var context = new HackathonEntities())
+            {
+                var families = context.Families.Select(f =>
+                new {
+                    f.ID,
+                    f.FamilyID,
+                    f.FamilySize,
+                    MaxOrderQuantity = f.MaxPointTotal,
+                    UsedOrderQuantity = f.Orders.Where(o => o.OrderDate < DateTime.Now.AddDays(-7)).Sum(o => o.PointTotal)
+                });
+                return Json(families);
+            }
         }
+
+        public JsonResult 
     }
 }

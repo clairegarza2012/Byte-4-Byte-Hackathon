@@ -23,6 +23,8 @@
         <AssociationConnector Association="HackathonModel.FK_OrderItemsItemID" />
         <AssociationConnector Association="HackathonModel.FK_RequestItemsItemID" />
         <AssociationConnector Association="HackathonModel.FK_OrderItemsOrderID" />
+        <AssociationConnector Association="HackathonModel.FK_FoodPantryStockItemID1" />
+        <AssociationConnector Association="HackathonModel.FK_itemstypeid" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -19,6 +19,7 @@ namespace byte4bite_hackathon.Database
         {
             this.OrderItems = new HashSet<OrderItem>();
             this.RequestedItems = new HashSet<RequestedItem>();
+            this.FoodPantryStocks = new HashSet<FoodPantryStock>();
         }
     
         public int ID { get; set; }
@@ -31,5 +32,8 @@ namespace byte4bite_hackathon.Database
         public virtual ICollection<OrderItem> OrderItems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RequestedItem> RequestedItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FoodPantryStock> FoodPantryStocks { get; set; }
+        public virtual ItemType ItemType { get; set; }
     }
 }
