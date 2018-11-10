@@ -158,6 +158,7 @@
     <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\FamilyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Database\Database.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -279,6 +280,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Donation.cshtml" />
     <Content Include="Views\Home\Family.cshtml" />
+    <Content Include="Views\Inventory\Index.cshtml" />
+    <Content Include="Views\Home\LoggedIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
