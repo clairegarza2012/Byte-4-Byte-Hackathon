@@ -1,11 +1,16 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@section Scripts{
+    @Scripts.Render("~/Scripts/Custom/home.js")
+}
 
 <div class="jumbotron">
     <h1>Byte 4 Bite Hackathon!</h1>
     <p class="lead">Team?.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <input type="text" id="datatopost" placeholder="Put something here to post" style="width:250px;" />
+    <div style="width:100px;height:25px;background-color:blue;color:white" id="getdata">Get Data</div>
 </div>
 
 <div class="row">

@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HackathonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hackathon.dbo.Family' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Family">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="FamilySize" />
+            <PropertyRef Name="ChildrenHaveCheckoutConsent" />
+            <PropertyRef Name="FamilyID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FamilySize" Type="int" Nullable="false" />
+          <Property Name="ChildrenHaveCheckoutConsent" Type="bit" Nullable="false" />
+          <Property Name="FamilyID" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hackathon.dbo.FoodPantry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FoodPantry">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Location" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hackathon.dbo.Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hackathon.dbo.ItemTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ItemTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hackathon.dbo.Orders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="FamilyID" />
+            <PropertyRef Name="OrderDate" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FamilyID" Type="int" Nullable="false" />
+          <Property Name="OrderDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HackathonModelStoreContainer">
+          <EntitySet Name="Family" EntityType="Self.Family" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Family].[ID] AS [ID], 
+    [Family].[FamilySize] AS [FamilySize], 
+    [Family].[ChildrenHaveCheckoutConsent] AS [ChildrenHaveCheckoutConsent], 
+    [Family].[FamilyID] AS [FamilyID]
+    FROM [dbo].[Family] AS [Family]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FoodPantry" EntityType="Self.FoodPantry" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FoodPantry].[ID] AS [ID], 
+    [FoodPantry].[Location] AS [Location]
+    FROM [dbo].[FoodPantry] AS [FoodPantry]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Items" EntityType="Self.Items" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Items].[ID] AS [ID], 
+    [Items].[Price] AS [Price], 
+    [Items].[Name] AS [Name], 
+    [Items].[Type] AS [Type]
+    FROM [dbo].[Items] AS [Items]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ItemTypes" EntityType="Self.ItemTypes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ItemTypes].[ID] AS [ID], 
+    [ItemTypes].[Type] AS [Type], 
+    [ItemTypes].[Description] AS [Description]
+    FROM [dbo].[ItemTypes] AS [ItemTypes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Orders" EntityType="Self.Orders" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Orders].[ID] AS [ID], 
+    [Orders].[FamilyID] AS [FamilyID], 
+    [Orders].[OrderDate] AS [OrderDate]
+    FROM [dbo].[Orders] AS [Orders]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HackathonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Family">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="FamilySize" />
+            <PropertyRef Name="ChildrenHaveCheckoutConsent" />
+            <PropertyRef Name="FamilyID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FamilySize" Type="Int32" Nullable="false" />
+          <Property Name="ChildrenHaveCheckoutConsent" Type="Boolean" Nullable="false" />
+          <Property Name="FamilyID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FoodPantry">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Location" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ItemType">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="FamilyID" />
+            <PropertyRef Name="OrderDate" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FamilyID" Type="Int32" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="HackathonEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Families" EntityType="Self.Family" />
+          <EntitySet Name="FoodPantries" EntityType="Self.FoodPantry" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="ItemTypes" EntityType="Self.ItemType" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HackathonModelStoreContainer" CdmEntityContainer="HackathonEntities">
+          <EntitySetMapping Name="Families">
+            <EntityTypeMapping TypeName="HackathonModel.Family">
+              <MappingFragment StoreEntitySet="Family">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FamilySize" ColumnName="FamilySize" />
+                <ScalarProperty Name="ChildrenHaveCheckoutConsent" ColumnName="ChildrenHaveCheckoutConsent" />
+                <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FoodPantries">
+            <EntityTypeMapping TypeName="HackathonModel.FoodPantry">
+              <MappingFragment StoreEntitySet="FoodPantry">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="HackathonModel.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemTypes">
+            <EntityTypeMapping TypeName="HackathonModel.ItemType">
+              <MappingFragment StoreEntitySet="ItemTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="HackathonModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

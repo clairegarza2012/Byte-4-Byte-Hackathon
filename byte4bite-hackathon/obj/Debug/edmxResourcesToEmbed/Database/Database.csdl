@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HackathonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Family">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FamilySize" />
+      <PropertyRef Name="ChildrenHaveCheckoutConsent" />
+      <PropertyRef Name="FamilyID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilySize" Type="Int32" Nullable="false" />
+    <Property Name="ChildrenHaveCheckoutConsent" Type="Boolean" Nullable="false" />
+    <Property Name="FamilyID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FoodPantry">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Location" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemType">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FamilyID" />
+      <PropertyRef Name="OrderDate" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="HackathonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Families" EntityType="Self.Family" />
+    <EntitySet Name="FoodPantries" EntityType="Self.FoodPantry" />
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="ItemTypes" EntityType="Self.ItemType" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+  </EntityContainer>
+</Schema>

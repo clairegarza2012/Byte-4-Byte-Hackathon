@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HackathonModelStoreContainer" CdmEntityContainer="HackathonEntities">
+    <EntitySetMapping Name="Families">
+      <EntityTypeMapping TypeName="HackathonModel.Family">
+        <MappingFragment StoreEntitySet="Family">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FamilySize" ColumnName="FamilySize" />
+          <ScalarProperty Name="ChildrenHaveCheckoutConsent" ColumnName="ChildrenHaveCheckoutConsent" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodPantries">
+      <EntityTypeMapping TypeName="HackathonModel.FoodPantry">
+        <MappingFragment StoreEntitySet="FoodPantry">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="HackathonModel.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemTypes">
+      <EntityTypeMapping TypeName="HackathonModel.ItemType">
+        <MappingFragment StoreEntitySet="ItemTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="HackathonModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

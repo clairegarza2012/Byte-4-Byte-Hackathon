@@ -1,4 +1,5 @@
-﻿using System;
+﻿using byte4bite_hackathon.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,10 +14,35 @@ namespace byte4bite_hackathon.Controllers
             return View();
         }
 
+        public JsonResult GetData(int id)
+        {
+            return Json($"This is some data from the server, you passed {id}");
+        }
+
+        public JsonResult CreatNewItem()
+        {
+            //edmx access example
+            using (var context = new HackathonEntities())
+            {
+                //creates a new item
+                var item = new Item()
+                {
+                    Name = "Green Beans",
+                    Price = 1.00m
+                };
+                //adds the item to the database
+                context.Items.Add(item);
+                //executes the save of anything manipulated
+                context.SaveChanges();
+            }
+            //json return to take actions on in the js
+            return Json(false);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
+            
             return View();
         }
 
