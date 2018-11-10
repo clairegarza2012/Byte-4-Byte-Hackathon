@@ -49,11 +49,26 @@ namespace byte4bite_hackathon.Controllers
         }
 
         //list of families
-            //family number
-            //last order date
-            //max order quantity
-            //remaining order quantity
+        //family number
+        //last order date
+        //max order quantity
+        //remaining order quantity
 
+        public JsonResult GetFamilies()
+        {
+            using (var context = new HackathonEntities())
+            {
+                var families = context.Families.Select(f =>
+                new {
+                    f.ID,
+                    f.FamilyID,
+                    f.FamilySize,
+                    MaxOrderQuantity = f.MaxPointTotal,
+                    UsedOrderQuantity = f.Orders.Where(o => o.OrderDate < DateTime.Now.AddDays(-7)).Sum(o => o.PointTotal)
+                });
+                return Json(families);
+            }
+        }
 
         //pantry items
         //family information
@@ -83,25 +98,11 @@ namespace byte4bite_hackathon.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            
+
             return View();
         }
 
         public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult Donation()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult LoggedIn()
         {
             ViewBag.Message = "Your contact page.";
 
