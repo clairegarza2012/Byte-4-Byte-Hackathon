@@ -30,7 +30,5 @@ namespace byte4bite_hackathon.Controllers
                 return Json(families);
             }
         }
-
-        public JsonResult 
     }
 }

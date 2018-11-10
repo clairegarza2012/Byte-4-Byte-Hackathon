@@ -106,14 +106,26 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_FoodPantryStockItemID">
-    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="1" />
     <End Role="FoodPantryStock" Type="Self.FoodPantryStock" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Orders">
+      <Principal Role="Items">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="FoodPantryStock">
         <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_itemstypeid">
+    <End Role="ItemTypes" Type="Self.ItemTypes" Multiplicity="0..1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="TypeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -205,8 +217,12 @@
       <End Role="FoodPantryStock" EntitySet="FoodPantryStock" />
     </AssociationSet>
     <AssociationSet Name="FK_FoodPantryStockItemID" Association="Self.FK_FoodPantryStockItemID">
-      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Items" EntitySet="Items" />
       <End Role="FoodPantryStock" EntitySet="FoodPantryStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_itemstypeid" Association="Self.FK_itemstypeid">
+      <End Role="ItemTypes" EntitySet="ItemTypes" />
+      <End Role="Items" EntitySet="Items" />
     </AssociationSet>
     <AssociationSet Name="FK_OrderItemsItemID" Association="Self.FK_OrderItemsItemID">
       <End Role="Items" EntitySet="Items" />
