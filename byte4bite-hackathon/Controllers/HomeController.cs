@@ -1,4 +1,5 @@
 ﻿using byte4bite_hackathon.Database;
+using byte4bite_hackathon.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace byte4bite_hackathon.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            
+
             return View();
         }
 
@@ -57,6 +58,18 @@ namespace byte4bite_hackathon.Controllers
         {
             ViewBag.Message = "Your volunteer page.";
 
+            return View();
+        }
+        [HttpPost]
+        public ActionResult VolunteerForm()
+        {
+            VolunteerForm volunteer = new VolunteerForm()
+            {
+                FirstName = Request.Form.GetValues("fname").First(),
+                LastName = Request.Form.GetValues("lname").First(),
+                Email = Request.Form.GetValues("email").First(),
+                PreferredSchool = Request.Form.GetValues("schools").First()
+            };
             return View();
         }
     }
