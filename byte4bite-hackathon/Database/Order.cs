@@ -14,8 +14,21 @@ namespace byte4bite_hackathon.Database
     
     public partial class Order
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Order()
+        {
+            this.FoodPantryStocks = new HashSet<FoodPantryStock>();
+            this.OrderItems = new HashSet<OrderItem>();
+        }
+    
         public int ID { get; set; }
         public int FamilyID { get; set; }
         public System.DateTime OrderDate { get; set; }
+    
+        public virtual Family Family { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FoodPantryStock> FoodPantryStocks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

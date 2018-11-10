@@ -4,46 +4,100 @@
     <EntitySetMapping Name="Families">
       <EntityTypeMapping TypeName="HackathonModel.Family">
         <MappingFragment StoreEntitySet="Family">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FamilySize" ColumnName="FamilySize" />
-          <ScalarProperty Name="ChildrenHaveCheckoutConsent" ColumnName="ChildrenHaveCheckoutConsent" />
           <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+          <ScalarProperty Name="ChildrenHaveCheckoutConsent" ColumnName="ChildrenHaveCheckoutConsent" />
+          <ScalarProperty Name="FamilySize" ColumnName="FamilySize" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodKits">
+      <EntityTypeMapping TypeName="HackathonModel.FoodKit">
+        <MappingFragment StoreEntitySet="FoodKit">
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FoodPantries">
       <EntityTypeMapping TypeName="HackathonModel.FoodPantry">
         <MappingFragment StoreEntitySet="FoodPantry">
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodPantryStocks">
+      <EntityTypeMapping TypeName="HackathonModel.FoodPantryStock">
+        <MappingFragment StoreEntitySet="FoodPantryStock">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="FoodPantryID" ColumnName="FoodPantryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Items">
       <EntityTypeMapping TypeName="HackathonModel.Item">
         <MappingFragment StoreEntitySet="Items">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ItemTypes">
       <EntityTypeMapping TypeName="HackathonModel.ItemType">
         <MappingFragment StoreEntitySet="ItemTypes">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="HackathonModel.OrderItem">
+        <MappingFragment StoreEntitySet="OrderItems">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="HackathonModel.Order">
         <MappingFragment StoreEntitySet="Orders">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PantryCoordinators">
+      <EntityTypeMapping TypeName="HackathonModel.PantryCoordinator">
+        <MappingFragment StoreEntitySet="PantryCoordinator">
+          <ScalarProperty Name="IsAdministrator" ColumnName="IsAdministrator" />
+          <ScalarProperty Name="FoodPantryID" ColumnName="FoodPantryID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestedItems">
+      <EntityTypeMapping TypeName="HackathonModel.RequestedItem">
+        <MappingFragment StoreEntitySet="RequestedItems">
+          <ScalarProperty Name="FulfillByDate" ColumnName="FulfillByDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="FoodPantryID" ColumnName="FoodPantryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

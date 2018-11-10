@@ -93,6 +93,7 @@ C:\Users\abussdieker\Source\Repos\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\
 C:\Users\abussdieker\Source\Repos\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.csproj.CopyComplete
 C:\Users\abussdieker\Source\Repos\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.dll
 C:\Users\abussdieker\Source\Repos\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.pdb
+<<<<<<< HEAD
 C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\ApplicationInsights.config
 C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\byte4bite-hackathon.dll.config
 C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\byte4bite-hackathon.dll
@@ -188,3 +189,100 @@ C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug
 C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.dll
 C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.pdb
 C:\Users\Clarissa\Hackathoon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.csprojAssemblyReference.cache
+=======
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\ApplicationInsights.config
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\byte4bite-hackathon.dll.config
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\byte4bite-hackathon.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\byte4bite-hackathon.pdb
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\csc.exe
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\csc.exe.config
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\csc.rsp
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\csi.exe
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\csi.exe.config
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\csi.rsp
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.AppContext.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Collections.Immutable.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Console.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.IO.Compression.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.IO.FileSystem.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.IO.Pipes.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Reflection.Metadata.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.AccessControl.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.Claims.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.ValueTuple.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Xml.XPath.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\vbc.exe
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\vbc.exe.config
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\vbc.rsp
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\VBCSCompiler.exe
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\roslyn\VBCSCompiler.exe.config
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Antlr3.Runtime.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\EntityFramework.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\EntityFramework.SqlServer.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.DependencyCollector.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.Web.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.WindowsServer.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.ApplicationInsights.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.Web.Infrastructure.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Newtonsoft.Json.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Helpers.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Mvc.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Optimization.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Razor.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.WebPages.Deployment.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.WebPages.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.WebPages.Razor.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\WebGrease.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\EntityFramework.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\EntityFramework.SqlServer.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Helpers.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Mvc.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Optimization.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.Razor.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.WebPages.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.WebPages.Deployment.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Web.WebPages.Razor.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Newtonsoft.Json.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Antlr3.Runtime.pdb
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.DependencyCollector.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.WindowsServer.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.AI.Web.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.csprojAssemblyReference.cache
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.csproj.CoreCompileInputs.cache
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.csproj.CopyComplete
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.dll
+C:\Adam Hackathon\Byte-4-Byte-Hackathon\byte4bite-hackathon\obj\Debug\byte4bite-hackathon.pdb
+>>>>>>> refs/remotes/origin/master
