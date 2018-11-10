@@ -13,6 +13,7 @@
           <Property Name="FamilySize" Type="int" Nullable="false" />
           <Property Name="ChildrenHaveCheckoutConsent" Type="bit" Nullable="false" />
           <Property Name="FamilyID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaxPointTotal" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="FoodKit">
           <Key>
@@ -47,8 +48,9 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Price" Type="decimal" Precision="15" Scale="2" />
-          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="TypeID" Type="int" />
+          <Property Name="PointValue" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ItemTypes">
           <Key>
@@ -74,6 +76,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FamilyID" Type="int" Nullable="false" />
           <Property Name="OrderDate" Type="datetime" Nullable="false" />
+          <Property Name="PointTotal" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PantryCoordinator">
           <Key>
@@ -292,6 +295,7 @@
           <Property Name="ChildrenHaveCheckoutConsent" Type="Boolean" Nullable="false" />
           <Property Name="FamilyID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="HackathonModel.FK_ordersfamilyid" FromRole="Family" ToRole="Order" />
+          <Property Name="MaxPointTotal" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="FoodKit">
           <Key>
@@ -331,10 +335,11 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Price" Type="Decimal" Precision="15" Scale="2" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="TypeID" Type="Int32" />
           <NavigationProperty Name="OrderItems" Relationship="HackathonModel.FK_OrderItemsItemID" FromRole="Item" ToRole="OrderItem" />
           <NavigationProperty Name="RequestedItems" Relationship="HackathonModel.FK_RequestItemsItemID" FromRole="Item" ToRole="RequestedItem" />
+          <Property Name="PointValue" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="ItemType">
           <Key>
@@ -365,6 +370,7 @@
           <NavigationProperty Name="Family" Relationship="HackathonModel.FK_ordersfamilyid" FromRole="Order" ToRole="Family" />
           <NavigationProperty Name="FoodPantryStocks" Relationship="HackathonModel.FK_FoodPantryStockItemID" FromRole="Order" ToRole="FoodPantryStock" />
           <NavigationProperty Name="OrderItems" Relationship="HackathonModel.FK_OrderItemsOrderID" FromRole="Order" ToRole="OrderItem" />
+          <Property Name="PointTotal" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="PantryCoordinator">
           <Key>
@@ -494,6 +500,7 @@
           <EntitySetMapping Name="Families">
             <EntityTypeMapping TypeName="HackathonModel.Family">
               <MappingFragment StoreEntitySet="Family">
+                <ScalarProperty Name="MaxPointTotal" ColumnName="MaxPointTotal" />
                 <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
                 <ScalarProperty Name="ChildrenHaveCheckoutConsent" ColumnName="ChildrenHaveCheckoutConsent" />
                 <ScalarProperty Name="FamilySize" ColumnName="FamilySize" />
@@ -534,6 +541,7 @@
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="HackathonModel.Item">
               <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="PointValue" ColumnName="PointValue" />
                 <ScalarProperty Name="TypeID" ColumnName="TypeID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
@@ -563,6 +571,7 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="HackathonModel.Order">
               <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="PointTotal" ColumnName="PointTotal" />
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
