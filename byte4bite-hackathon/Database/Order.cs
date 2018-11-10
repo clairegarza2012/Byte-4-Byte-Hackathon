@@ -24,6 +24,7 @@ namespace byte4bite_hackathon.Database
         public int ID { get; set; }
         public int FamilyID { get; set; }
         public System.DateTime OrderDate { get; set; }
+        public int PointTotal { get; set; }
     
         public virtual Family Family { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
