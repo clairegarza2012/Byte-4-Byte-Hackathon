@@ -24,6 +24,7 @@ namespace byte4bite_hackathon.Database
         public int FamilySize { get; set; }
         public bool ChildrenHaveCheckoutConsent { get; set; }
         public string FamilyID { get; set; }
+        public int MaxPointTotal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

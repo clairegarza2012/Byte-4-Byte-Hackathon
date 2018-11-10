@@ -25,6 +25,7 @@ namespace byte4bite_hackathon.Database
         public Nullable<decimal> Price { get; set; }
         public string Name { get; set; }
         public Nullable<int> TypeID { get; set; }
+        public int PointValue { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderItem> OrderItems { get; set; }
