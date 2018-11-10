@@ -8,7 +8,7 @@
 <h2 style="text-align:center">Families</h2>
 
 <div id="familiesTemplate">
-    <table id="familesTable">
+    <table id="familiesTable">
         <thead>
             <tr>
                 <th>
@@ -18,30 +18,72 @@
                     Last Visited
                 </th>
                 <th>
-                    Last Visited Amount
+                    Last Visited Points
                 </th>
                 <th>
-                    Max Quantity
+                    Max Points
                 </th>
             </tr>
         </thead>
         <tbody>
-            {{each families}}
-            <tr id="${ID}" class="familyLineItem">
+            @*{{each families}}
+        <tr id="${ID}" class="familyLineItem">
+            <td>
+                ${FamilyNumber}
+            </td>
+            <td>
+                ${LastVisitedDate}
+            </td>
+            <td>
+                ${LastVistedAmount}
+            </td>
+            <td>
+                ${MaxQuantity}
+            </td>
+        </tr>
+        {{/each}}*@
+            <tr>
                 <td>
-                    ${FamilyNumber}
+                    3820HFY4UFY74
                 </td>
                 <td>
-                    ${LastVisitedDate}
+                    11/06/2018
                 </td>
                 <td>
-                    ${LastVistedAmount}
+                    100
                 </td>
                 <td>
-                    ${MaxQuantity}
+                    130
                 </td>
             </tr>
-            {{/each}}
+            <tr>
+                <td>
+                    38HFJFD8Y38YR
+                </td>
+                <td>
+                    11/05/2018
+                </td>
+                <td>
+                    130
+                </td>
+                <td>
+                    130
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    0988HFHFO8YHUW
+                </td>
+                <td>
+                    11/03/2018
+                </td>
+                <td>
+                    140
+                </td>
+                <td>
+                    130
+                </td>
+            </tr>
         </tbody>
     </table>
 

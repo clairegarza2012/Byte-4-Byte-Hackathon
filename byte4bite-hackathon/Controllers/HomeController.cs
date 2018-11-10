@@ -100,5 +100,10 @@ namespace byte4bite_hackathon.Controllers
 
             return View();
         }
+
+        public ActionResult Family()
+        {
+            return View();
+        }
     }
 }
