@@ -108,5 +108,12 @@ namespace byte4bite_hackathon.Controllers
 
             return View();
         }
+
+        public ActionResult LoggedIn()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

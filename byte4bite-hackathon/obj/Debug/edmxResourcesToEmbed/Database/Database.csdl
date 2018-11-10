@@ -53,6 +53,7 @@
     <Property Name="ChildrenHaveCheckoutConsent" Type="Boolean" Nullable="false" />
     <Property Name="FamilyID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Orders" Relationship="HackathonModel.FK_ordersfamilyid" FromRole="Family" ToRole="Order" />
+    <Property Name="MaxPointTotal" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="FoodKit">
     <Key>
@@ -92,10 +93,11 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Price" Type="Decimal" Precision="15" Scale="2" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="TypeID" Type="Int32" />
     <NavigationProperty Name="OrderItems" Relationship="HackathonModel.FK_OrderItemsItemID" FromRole="Item" ToRole="OrderItem" />
     <NavigationProperty Name="RequestedItems" Relationship="HackathonModel.FK_RequestItemsItemID" FromRole="Item" ToRole="RequestedItem" />
+    <Property Name="PointValue" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="ItemType">
     <Key>
@@ -126,6 +128,7 @@
     <NavigationProperty Name="Family" Relationship="HackathonModel.FK_ordersfamilyid" FromRole="Order" ToRole="Family" />
     <NavigationProperty Name="FoodPantryStocks" Relationship="HackathonModel.FK_FoodPantryStockItemID" FromRole="Order" ToRole="FoodPantryStock" />
     <NavigationProperty Name="OrderItems" Relationship="HackathonModel.FK_OrderItemsOrderID" FromRole="Order" ToRole="OrderItem" />
+    <Property Name="PointTotal" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="PantryCoordinator">
     <Key>

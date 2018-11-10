@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Families">
       <EntityTypeMapping TypeName="HackathonModel.Family">
         <MappingFragment StoreEntitySet="Family">
+          <ScalarProperty Name="MaxPointTotal" ColumnName="MaxPointTotal" />
           <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
           <ScalarProperty Name="ChildrenHaveCheckoutConsent" ColumnName="ChildrenHaveCheckoutConsent" />
           <ScalarProperty Name="FamilySize" ColumnName="FamilySize" />
@@ -44,6 +45,7 @@
     <EntitySetMapping Name="Items">
       <EntityTypeMapping TypeName="HackathonModel.Item">
         <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="PointValue" ColumnName="PointValue" />
           <ScalarProperty Name="TypeID" ColumnName="TypeID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Price" ColumnName="Price" />
@@ -73,6 +75,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="HackathonModel.Order">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="PointTotal" ColumnName="PointTotal" />
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
           <ScalarProperty Name="FamilyID" ColumnName="FamilyID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
