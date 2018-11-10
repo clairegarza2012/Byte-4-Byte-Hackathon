@@ -26,9 +26,14 @@ namespace byte4bite_hackathon.Database
         }
     
         public virtual DbSet<Family> Families { get; set; }
+        public virtual DbSet<FoodKit> FoodKits { get; set; }
         public virtual DbSet<FoodPantry> FoodPantries { get; set; }
+        public virtual DbSet<FoodPantryStock> FoodPantryStocks { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<ItemType> ItemTypes { get; set; }
+        public virtual DbSet<OrderItem> OrderItems { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<PantryCoordinator> PantryCoordinators { get; set; }
+        public virtual DbSet<RequestedItem> RequestedItems { get; set; }
     }
 }

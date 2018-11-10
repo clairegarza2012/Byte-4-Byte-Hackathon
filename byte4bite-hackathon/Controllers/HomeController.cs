@@ -19,11 +19,52 @@ namespace byte4bite_hackathon.Controllers
             return Json($"This is some data from the server, you passed {id}");
         }
 
+        public JsonResult GetDummyTemplateInfo()
+        {
+            using (var context = new HackathonEntities())
+            {
+                var items = context.Items.Where(i => i.ID < 100).Select(i => new
+                {
+                    i.ID,
+                    i.Name
+                }).ToList();
+                var obj = new
+                {
+                    Fullname = "Adam",
+                    Age = 29,
+                    Items = items
+                };
+                return Json(obj);
+            }
+        }
+
+        public JsonResult GetDropDownData()
+        {
+            Dictionary<int, string> dropdownitems = new Dictionary<int, string>();
+            dropdownitems.Add(1, "First");
+            dropdownitems.Add(2, "Second");
+            dropdownitems.Add(3, "Third");
+            dropdownitems.Add(4, "Fourth");
+            return Json(dropdownitems.ToList());
+        }
+
+        //list of families
+            //family number
+            //last order date
+            //max order quantity
+            //remaining order quantity
+
+
+        //pantry items
+        //family information
         public JsonResult CreatNewItem()
         {
             //edmx access example
             using (var context = new HackathonEntities())
             {
+                //retreive an object from the database
+                var something = context.Orders.FirstOrDefault(o => o.ID == 1);
+
                 //creates a new item
                 var item = new Item()
                 {
